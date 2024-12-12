@@ -1,5 +1,3 @@
-import './index.scss'
-import { asas } from "./temp";
+import './index.scss';
 
-asas('dmitry')
 
