@@ -3,17 +3,19 @@ import webpack from 'webpack';
 import { webpackPlugins } from './webpackPlugins';
 import { webpackLoaders } from './webpackLoaders';
 import { webpackResolve } from './webpackResolve';
+import { TBuildOptions } from './types/types';
 
-export const webpackBuildConfig = (): webpack.Configuration => {
+export const webpackBuildConfig = (options: TBuildOptions): webpack.Configuration => {
+    const {mode, paths, isDev} = options
     return {
-        mode: "development",
-        entry: path.resolve(__dirname, "src", "index.ts" ),
+        mode,
+        entry: paths.entry,
         output: {
-            filename: "[name].[contenthash].js",
-            path: path.resolve(__dirname, "dist"),
+            filename: "[name].min.js",
+            path: paths.output,
             clean: true
         },
-        plugins: webpackPlugins(),
+        plugins: webpackPlugins(options),
         module: {
             rules: webpackLoaders(),
           },

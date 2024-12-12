@@ -1,11 +1,12 @@
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { TBuildOptions } from './types/types';
 
-export const webpackPlugins = (): webpack.WebpackPluginInstance[] => {
+export const webpackPlugins = ({paths}: TBuildOptions): webpack.WebpackPluginInstance[] => {
     return [
         new HtmlWebpackPlugin({
-         template: path.resolve(__dirname, "index.html")
+         template: paths.html
         }),
         new webpack.ProgressPlugin(),
      ]
