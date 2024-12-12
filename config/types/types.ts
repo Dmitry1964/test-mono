@@ -6,14 +6,14 @@ export type TBuildPaths = {
     html: string;
 }
 
-export type BuildEnv = {
+export type TBuildEnv = {
     port: number;
-    
+    mode: TMode;
 }
 
 export type TBuildOptions = {
     mode: TMode;
     paths: TBuildPaths;
     isDev: boolean;
-
+    port: number;
 }

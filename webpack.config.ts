@@ -1,17 +1,17 @@
-import path from 'path';
-import { TBuildPaths, TMode } from './config/types/types';
-import { webpackBuildConfig } from './config/webpackBuildConfig';
+import path from "path";
+import { TBuildEnv, TBuildPaths, TMode } from "./config/types/types";
+import { webpackBuildConfig } from "./config/webpackBuildConfig";
 
-const mode: TMode = 'development';
+export default ({mode = 'development', port}: TBuildEnv) => {
 
-const paths: TBuildPaths= {
-    entry: path.resolve(__dirname, "src", "index.ts" ),
+  const paths: TBuildPaths = {
+    entry: path.resolve(__dirname, "src", "index.ts"),
     output: path.resolve(__dirname, "dist"),
-    html: path.resolve(__dirname, "index.html")
-}
+    html: path.resolve(__dirname, "index.html"),
+  };
 
-const isDev = mode === 'development'
+  const isDev = mode === "development";
 
-const config = webpackBuildConfig({paths, mode, isDev})
-
-export default config;
+  const config = webpackBuildConfig({ paths, mode, isDev, port });
+  return config;
+};
