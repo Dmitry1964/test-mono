@@ -9,7 +9,7 @@ import { webpackDevServer } from "./webpackDevServer";
 export const webpackBuildConfig = (
   options: TBuildOptions
 ): webpack.Configuration => {
-  const { mode, paths, isDev, port } = options;
+  const { mode, paths, isDev } = options;
   return {
     mode,
     entry: paths.entry,

@@ -4,6 +4,7 @@ export type TBuildPaths = {
     entry: string;
     output: string;
     html: string;
+    copyFrom: string;
 }
 
 export type TBuildEnv = {
