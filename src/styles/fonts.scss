@@ -4,15 +4,6 @@
   font-family: "Golos";
 
   font-display: swap;
-  src: url("/public/fonts/golostext_regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Golos";
-
-  font-display: swap;
   src: url("/public/fonts/golostext_regular.woff") format("woff"), url("/public/fonts/golostext_regular.woff2") format("woff2");
 }
 
