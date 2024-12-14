@@ -1,0 +1,25 @@
+@use '../variables.scss' as *;
+
+.btn {
+  transition: background-color 0.35s ease;
+
+  &:hover {
+    background-color: $color-brick-red;
+  }
+
+  &:active {
+    background-color: $color-bright-red;
+  }
+}
+
+.link {
+  transition: opacity 0.35s ease;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}

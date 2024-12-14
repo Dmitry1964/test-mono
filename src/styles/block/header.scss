@@ -7,6 +7,10 @@
   @include vp-1319 {
     padding: 14px 0;
   }
+
+  @include vp-767 {
+    padding: 10px 0 15px;
+  }
 }
 
 .header__wrapper {
@@ -20,6 +24,10 @@
 
   @include vp-1023 {
     grid-template-columns: 1fr 90px 17.83% 25.14%;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr 67px 1fr;
   }
 }
 
@@ -46,6 +54,10 @@
     margin-left: 48px;
     padding-bottom: 5px;
     gap: 30px
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }
 
@@ -76,6 +88,10 @@
   @include vp-1023 {
     height: 30px;
   }
+
+  @include vp-767 {
+    height: 40px;
+  }
 }
 
 .header__btn {
@@ -94,9 +110,14 @@
 .header__btn--compare,
 .header__btn--find {
   color: $color-ghost;
+  transition: color 0.35s ease;
 
   &:last-of-type {
     margin-left: 23px;
+  }
+
+  &:hover {
+    color: $color-black-default;
   }
 }
 
@@ -115,6 +136,10 @@
 
   @include vp-1023 {
     padding: 0 0 0 26.5%;
+  }
+
+  @include vp-767 {
+    display: none;
   }
 }
 
@@ -150,6 +175,7 @@
   background-color: $color-cardinal;
   justify-self: flex-end;
   border-radius: 14px;
+  transition: background-color 0.3s ease;
 
   @include vp-1319 {
     width: 100%;

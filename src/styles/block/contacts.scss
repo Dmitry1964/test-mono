@@ -40,6 +40,12 @@
       font-size: 3.2rem;
       padding-bottom: 5px;
     }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 120%;
+      padding-bottom: 2px;
+    }
   }
 }
 
@@ -72,9 +78,10 @@
 
 .contacts__nav-link {
   font-size: 1.2rem;
-  color: $color-ghost;
+  color: $color-storm-gray;
 
   &--active {
-    color: $color-storm-gray;
+    color: $color-ghost;
+    cursor: none;
   }
 }
