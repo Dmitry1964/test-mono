@@ -1,0 +1,18 @@
+// Viewports
+
+$vp-1320: 1320px;
+$vp-1024: 1024px;
+
+
+// Desctop first
+
+@mixin vp-1319 {
+  @media (max-width: $vp-1320 - 1) {
+    @content;
+  }
+}
+@mixin vp-1023 {
+  @media (max-width: $vp-1024 - 1) {
+    @content;
+  }
+}

@@ -15,5 +15,15 @@
   font-family: "Graphik";
 
   font-display: swap;
-  src: url("/public/fonts/graphiklcweb_medium.woff") format("woff"), url("/public/fonts/graphiklcweb_medium.woff") format("woff2");
+  src: url("/public/fonts/graphiklcweb_medium.woff") format("woff"), url("/public/fonts/graphiklcweb_medium.woff2") format("woff2");
+}
+
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roadradio";
+
+  font-display: swap;
+  src: url("/public/fonts/roadradio.woff") format("woff"), url("/public/fonts/roadradio.woff2") format("woff2");
 }

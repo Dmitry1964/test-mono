@@ -1,11 +1,33 @@
+@use '../mixins.scss' as *;
+@use '../variables.scss' as *;
+
 .header {
-  padding: 12px 0 15px;
+  padding: 11px 0 13px;
+
+  @include vp-1319 {
+    padding: 14px 0;
+  }
 }
 
 .header__wrapper {
   display: grid;
-  grid-template-columns: 1fr 106px 12.01% 14.34% 19.4%;
+  grid-template-columns: 1fr 8.21% 12.01% 14.34% 19.4%;
   align-items: center;
+
+  @include vp-1319 {
+    grid-template-columns: 1fr 8.21% 10.5% 18% 15%;
+  }
+
+  @include vp-1023 {
+    grid-template-columns: 1fr 90px 17.83% 25.14%;
+  }
+}
+
+.header__btn--menu svg {
+
+  @include vp-1319 {
+    width: 23px;
+  }
 }
 
 .header__nav {
@@ -18,19 +40,41 @@
   flex-wrap: wrap;
   margin-left: 59px;
   align-items: center;
+  gap: 46px;
+
+  @include vp-1319 {
+    margin-left: 48px;
+    padding-bottom: 5px;
+    gap: 30px
+  }
 }
 
 .header__nav-item {
-  margin-left: 46px;
 
-  &:first-child {
-    margin-left: 0;
+  &:last-child {
+    @include vp-1023 {
+      display: none;
+    }
   }
 
   & a {
     font-size: 1.5rem;
     line-height: 1.8rem;
-    color: var(--color-black-default);
+    color: $color-black-default;
+
+    @include vp-1319 {
+      font-size: 1.4rem;
+      line-height: 140%;
+    }
+  }
+}
+
+.header__logo img {
+  width: 100%;
+  object-fit: contain;
+
+  @include vp-1023 {
+    height: 30px;
   }
 }
 
@@ -49,7 +93,7 @@
 
 .header__btn--compare,
 .header__btn--find {
-  color: var(--color-ghost);
+  color: $color-ghost;
 
   &:last-of-type {
     margin-left: 23px;
@@ -64,6 +108,14 @@
   height: 100%;
   padding-top: 12px;
   padding-left: 29%;
+
+  @include vp-1319 {
+    padding-left: 15%;
+  }
+
+  @include vp-1023 {
+    padding: 0 0 0 26.5%;
+  }
 }
 
 .header__link {
@@ -71,27 +123,41 @@
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.8rem;
-    color: var(--color-black-default);
+    color: $color-black-default;
     margin-bottom: 6px;
+
+    @include vp-1023 {
+      margin-bottom: 3px;
+    }
   }
 
   &--email {
     font-family: "Graphik", "Arial", sans-serif;
     font-size: 13px;
     line-height: 120%;
-    color: var(--color-storm-gray);
+    color: $color-storm-gray;
   }
 }
 
 .header__btn--submit {
   font-size: 1.4rem;
   line-height: 100%;
-  color: var(--color-white-default);
+  color: $color-white-default;
   text-transform: uppercase;
 
   width: 190px;
   height: 52px;
-  background-color: var(--color-cardinal);
+  background-color: $color-cardinal;
   justify-self: flex-end;
   border-radius: 14px;
+
+  @include vp-1319 {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  @include vp-1023 {
+    display: none;
+  }
+
 }

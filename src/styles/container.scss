@@ -1,7 +1,17 @@
+@use '../styles/mixins.scss' as *;
+
 .container {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1350px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 30px;
+
+  @include vp-1319 {
+    padding: 0 20px;
+  }
+
+  @include vp-1023 {
+    padding: 0 28px;
+  }
 }
 

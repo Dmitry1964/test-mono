@@ -1,13 +1,20 @@
+@use '../variables.scss' as *;
+@use '../mixins.scss' as *;
+
 .contacts {
-  background-color: var(--color-white-smoke);
+  background-color: $color-white-smoke;
 }
 
 .contacts__nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 59px;
-  border-bottom: 1px solid var(--color-black-10);
+  height: 60px;
+  border-bottom: 1px solid $color-black-10;
+
+  @include vp-1023 {
+    height: 48px;
+  }
 }
 
 .contacts__info {
@@ -16,28 +23,58 @@
   align-items: center;
   height: 100px;
 
+  @include vp-1023 {
+    height: 62px;
+  }
+
   & h2 {
+    font-family: $font-roadradio;
     font-size: 4.6rem;
     line-height: 100%;
     font-weight: 400;
-    color: var(--color-black-default);
+    color: $color-black-default;
+    padding-bottom: 10px;
     text-transform: uppercase;
+
+    @include vp-1023 {
+      font-size: 3.2rem;
+      padding-bottom: 5px;
+    }
   }
 }
 
 .contacts__nav-list {
   display: flex;
+  padding-bottom: 5px;
+  padding-left: 30px;
 }
 
 .contacts__nav-item {
   padding-right: 30px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $color-storm-gray;
+    top: 6px;
+    left: -17px;
+
+  }
+
+  &:first-child::before {
+    display: none;
+  }
 }
 
 .contacts__nav-link {
   font-size: 1.2rem;
-  color: var(--color-ghost);
+  color: $color-ghost;
 
   &--active {
-    color: var(--color-storm-gray);
+    color: $color-storm-gray;
   }
 }
