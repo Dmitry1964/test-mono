@@ -1,4 +1,4 @@
-type TBranch = {
+export type TBranch = {
   title: string;
   phone: string[];
   fax: string[];

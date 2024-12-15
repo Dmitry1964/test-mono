@@ -1,0 +1,79 @@
+@use '../variables.scss' as *;
+
+.branches {
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+.branches__list {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+
+.branches__card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 310px;
+  padding: 33px 10px 40px 22px;
+  background-color: $color-white-smoke;
+  border-radius: 20px;
+}
+
+[data-size="big"] {
+  width: 630px;
+}
+
+.branches__card-title {
+  font-family: $font-roadradio;
+  font-size: 2.6em;
+  line-height: 110%;
+  margin: 0 0 17px;
+}
+
+.branches__card-phones {
+
+  margin-bottom: 8px;
+
+  &--small {
+    width: 68%;
+  }
+
+  & span {
+    font-size: 1.9rem;
+    line-height: 150%;
+  }
+}
+
+.branches__card-fax {
+  font-size: 1.9rem;
+  line-height: 150%;
+  margin: 0;
+  transform: translateY(-8px);
+}
+
+.branches__card-address {
+  font-size: 1.4rem;
+  line-height: 140%;
+  color: $color-storm-gray;
+  margin: 0 0 8px;
+}
+
+.branches__card-link {
+  font-size: 1.4rem;
+  line-height: 140%;
+  color: $color-cardinal;
+  margin: 0 0 20px;
+}
+
+.branches__card-operating {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.4rem;
+  line-height: 140%;
+  margin: 0;
+  flex-grow: 1;
+}
