@@ -2,6 +2,10 @@
 
 .btn {
   transition: background-color 0.35s ease;
+  font-family: $font-roadradio;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $color-brick-red;
