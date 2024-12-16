@@ -27,6 +27,11 @@
     background-color: $color-jaguar;
     z-index: -10;
   }
+
+  @include vp-1023 {
+    height: 420px;
+    padding-top: 35px;
+  }
 }
 
 .footer__wrapper {
@@ -38,11 +43,19 @@
   padding-top: 5px;
   margin-bottom: 70px;
 
+  @include vp-1023 {
+    margin-bottom: 50px;
+  }
+
   & li {
     margin-bottom: 10px;
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    @include vp-1023 {
+      margin-bottom: 0px;
     }
   }
 }
@@ -52,6 +65,11 @@
   line-height: 140%;
   color: $color-white-default;
   transition: color 0.3s ease;
+
+  @include vp-1023 {
+    font-size: 2rem;
+    line-height: 170%;
+  }
 
   &:hover {
     color: $color-amaranth;
@@ -69,6 +87,10 @@
   color: $color-storm-gray;
   margin-right: 24px;
   transition: color 0.3s ease;
+
+  @include vp-1023 {
+    margin-right: 15px;
+  }
 
   &:hover {
     color: $color-white-default;
@@ -88,12 +110,21 @@
 
 .footer__contact {
   padding-left: 19.5%;
+
+  @include vp-1023 {
+    padding-left: 11.5%;
+  }
 }
 
 .footer__contact-phones {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+
+  @include vp-1023 {
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
 }
 
 .footer__contact-links {
@@ -101,6 +132,15 @@
 
   & li:not(:last-child) {
     margin-bottom: 10px;
+
+    @include vp-1023 {
+      margin-bottom: 0;
+    }
+  }
+
+  @include vp-1023 {
+    padding-top: 7px;
+    margin-bottom: 22px;
   }
 }
 
@@ -109,6 +149,11 @@
   font-weight: 500;
   line-height: 130%;
   color: $color-white-default;
+
+  @include vp-1023 {
+    font-size: 2.3rem;
+    line-height: 150%;
+  }
 }
 
 .footer__contact-btn {
@@ -123,6 +168,10 @@
   cursor: pointer;
   transition: opacty 0.3s ease;
 
+  @include vp-1023 {
+    height: 46px;
+  }
+
   &:hover {
     opacity: 0.7;
   }
@@ -134,6 +183,12 @@
   line-height: 140%;
   color: $color-amaranth;
   margin-bottom: 97px;
+
+  @include vp-1023 {
+    font-size: 1.9rem;
+    line-height: 110%;
+    margin-bottom: 30px;
+  }
 }
 
 .footer__address {
@@ -144,6 +199,10 @@
   color: $color-white-default;
   letter-spacing: -0.05em;
   margin-bottom: 77px;
+
+  @include vp-1023 {
+    margin-bottom: 72px;
+  }
 }
 
 .footer__info {
