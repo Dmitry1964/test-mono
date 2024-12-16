@@ -51,10 +51,10 @@
   font-size: 2.4rem;
   line-height: 140%;
   color: $color-white-default;
-  transition: opacity 0.3s ease;
+  transition: color 0.3s ease;
 
   &:hover {
-    opacity: 0.7;
+    color: $color-amaranth;
   }
 }
 
@@ -120,6 +120,12 @@
   border: 2px solid $color-gun-powder;
   border-radius: 14px;
   background-color: transparent;
+  cursor: pointer;
+  transition: opacty 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .footer__contact-email {
