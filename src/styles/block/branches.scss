@@ -8,6 +8,11 @@
   @include vp-1023 {
     padding-top: 59px;
   }
+
+  @include vp-767 {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
 }
 
 .branches__list {
@@ -34,6 +39,12 @@
     width: 350px;
     padding-top: 30px;
   }
+
+  @include vp-767 {
+    width: 288px;
+    padding-left: 13px;
+    padding-top: 33px;
+  }
 }
 
 [data-size="big"] {
@@ -42,6 +53,11 @@
   @include vp-1023 {
     width: 710px;
     height: 270px;
+  }
+
+  @include vp-767 {
+    width: 288px;
+    height: 395px;
   }
 }
 
@@ -64,11 +80,25 @@
       width: 55%;
       margin-bottom: 10px;
     }
+
+    @include vp-767 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   & span {
     font-size: 1.9rem;
     line-height: 150%;
+  }
+
+  &--big {
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
 }
@@ -81,6 +111,10 @@
 
   @include vp-1023 {
     margin: 0 0 5px;
+  }
+
+  @include vp-767 {
+    width: 84%;
   }
 }
 
