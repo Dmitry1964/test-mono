@@ -2,7 +2,7 @@
 
 .map {
   height: 599px;
-  background-color: gray;
+  width: 100vw;
 
   @include vp-1023 {
     height: 480px;
