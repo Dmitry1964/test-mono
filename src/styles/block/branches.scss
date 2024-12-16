@@ -67,6 +67,11 @@
   line-height: 140%;
   color: $color-cardinal;
   margin: 0 0 20px;
+  transition: opacity 0.35 ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 .branches__card-operating {
