@@ -130,12 +130,12 @@
               <h2>Остались вопросы?</h2>
               <form action="submit">
                 <div class="info__form-fields">
-                  <div class="info__input-container">
+                  <div class="info__input-container info__input-container--name">
                     <input type="text" name="name" id="name" placeholder=" ">
                     <label for="name" class="info__input-placeholder">Ваше
                       имя</label>
                   </div>
-                  <div class="info__input-container">
+                  <div class="info__input-container info__input-container--phone">
                     <input type="text" name="phone" id="phone" placeholder=" " required>
                     <label for="phone" class="info__input-placeholder">Ваш
                       телефон</label>
@@ -160,9 +160,7 @@
           </div>
         </div>
       </section>
-      <div class="map" id="map">
-
-      </div>
+      <div class="map" id="map"></div>
       <section class="branches">
         <h2 class="visually-hidden">Филиалы Моневак</h2>
         <div class="container">
@@ -233,5 +231,10 @@
             </div>
           </div>
         </footer>
+        <template id="popup">
+          <div class="popup__wrapper">
+            <span class="popup__message"></span>
+          </div>
+        </template>
       </body>
     </html>

@@ -1,0 +1,19 @@
+@use '../variables.scss' as *;
+
+.popup__wrapper {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  top: 110%;
+  left: 0;
+  padding-left: 20px;
+  background-color: $color-error;
+  border-radius: 4px;
+}
+
+.popup__message {
+  font-size: 1.2rem;
+  line-height: 100%;
+  text-align: center;
+  color: $color-brick-red;
+}

@@ -1,7 +1,27 @@
 import { log } from 'console';
 import IMask from 'imask';
 
+const PHONE_ERROR = 'Введите корректный телефонный номер'
+
+// const template = document.getElementById('popup') as HTMLTemplateElement;
 const phoneField = document.getElementById('phone');
+const phoneContainer = document.querySelector('.info__input-container--phone');
+const nameContainer = document.querySelector('.info__input-container--name');
+
+const showErrorPopup = (message: string) => {
+  const template = document.getElementById('popup') as HTMLTemplateElement;
+
+  const errorPopup = template.content.cloneNode(true) as HTMLElement;
+  errorPopup.querySelector('.popup__message').textContent = message;
+  phoneContainer.append(errorPopup);
+}
+
+const removeErrorPopup = () => {
+  const elem = phoneContainer.querySelector('.popup__wrapper');
+  if (elem) {
+    elem.remove()
+  }
+}
 
 export const initForm = () => {
 
@@ -20,9 +40,11 @@ export const initValidate = () => {
     const target = evt.target as HTMLInputElement;
 
       if (!regPhone.test(target.value)) {
-        phoneField.classList.add('isError')
+        phoneField.classList.add('isError');
+        showErrorPopup(PHONE_ERROR)
+      } else {
+        removeErrorPopup()
       }
-    console.log(regPhone.test(target.value));
   }
 
 const onChangePhoneField = () => {
