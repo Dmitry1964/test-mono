@@ -7,6 +7,7 @@ const PHONE_ERROR = 'Введите корректный телефонный н
 const phoneField = document.getElementById('phone');
 const phoneContainer = document.querySelector('.info__input-container--phone');
 const nameContainer = document.querySelector('.info__input-container--name');
+const form = document.getElementById('info-form');
 
 const showErrorPopup = (message: string) => {
   const template = document.getElementById('popup') as HTMLTemplateElement;
@@ -21,6 +22,13 @@ const removeErrorPopup = () => {
   if (elem) {
     elem.remove()
   }
+}
+
+
+const aaa = (evt: SubmitEvent) => {
+  evt.preventDefault()
+  console.log('sdsdsdsdsd');
+
 }
 
 export const initForm = () => {
@@ -53,4 +61,5 @@ const onChangePhoneField = () => {
 
   phoneField.addEventListener('blur', handlePhoneField);
   phoneField.addEventListener('input', onChangePhoneField )
+  form.addEventListener('submit', aaa);
 }
