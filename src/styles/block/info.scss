@@ -351,6 +351,12 @@
   margin-left: 2px;
 }
 
+.info__form-button--disabled {
+  background-color: $color-gray;
+  cursor: none;
+  opacity: 0.5;
+}
+
 .info__break {
   display: none;
 
