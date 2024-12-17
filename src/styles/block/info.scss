@@ -358,3 +358,8 @@
     display: block;
   }
 }
+
+.isError {
+  background-color: $color-error;
+  color: $color-cardinal;
+}
